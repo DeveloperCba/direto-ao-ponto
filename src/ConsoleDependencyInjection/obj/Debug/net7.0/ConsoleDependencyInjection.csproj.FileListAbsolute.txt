@@ -1,0 +1,52 @@
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\bin\Debug\net7.0\ConsoleDependencyInjection.exe
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\bin\Debug\net7.0\ConsoleDependencyInjection.deps.json
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\bin\Debug\net7.0\ConsoleDependencyInjection.runtimeconfig.json
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\bin\Debug\net7.0\ConsoleDependencyInjection.dll
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\bin\Debug\net7.0\ConsoleDependencyInjection.pdb
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\bin\Debug\net7.0\Microsoft.Extensions.Configuration.dll
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\bin\Debug\net7.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\bin\Debug\net7.0\Microsoft.Extensions.Configuration.Binder.dll
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\bin\Debug\net7.0\Microsoft.Extensions.Configuration.CommandLine.dll
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\bin\Debug\net7.0\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\bin\Debug\net7.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\bin\Debug\net7.0\Microsoft.Extensions.Configuration.Json.dll
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\bin\Debug\net7.0\Microsoft.Extensions.DependencyInjection.dll
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\bin\Debug\net7.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\bin\Debug\net7.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\bin\Debug\net7.0\Microsoft.Extensions.FileProviders.Physical.dll
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\bin\Debug\net7.0\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\bin\Debug\net7.0\Microsoft.Extensions.Logging.dll
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\bin\Debug\net7.0\Microsoft.Extensions.Logging.Configuration.dll
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\bin\Debug\net7.0\Microsoft.Extensions.Logging.Console.dll
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\bin\Debug\net7.0\Microsoft.Extensions.Logging.Debug.dll
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\bin\Debug\net7.0\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\bin\Debug\net7.0\Microsoft.Extensions.Primitives.dll
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\obj\Debug\net7.0\ConsoleDependencyInjection.csproj.AssemblyReference.cache
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\obj\Debug\net7.0\ConsoleDependencyInjection.GeneratedMSBuildEditorConfig.editorconfig
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\obj\Debug\net7.0\ConsoleDependencyInjection.AssemblyInfoInputs.cache
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\obj\Debug\net7.0\ConsoleDependencyInjection.AssemblyInfo.cs
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\obj\Debug\net7.0\ConsoleDependencyInjection.csproj.CoreCompileInputs.cache
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\obj\Debug\net7.0\ConsoleDependencyInjection.csproj.CopyComplete
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\obj\Debug\net7.0\ConsoleDependencyInjection.dll
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\obj\Debug\net7.0\refint\ConsoleDependencyInjection.dll
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\obj\Debug\net7.0\ConsoleDependencyInjection.pdb
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\obj\Debug\net7.0\ConsoleDependencyInjection.genruntimeconfig.cache
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\obj\Debug\net7.0\ref\ConsoleDependencyInjection.dll
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\bin\Debug\net7.0\appsettings.json
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\bin\Debug\net7.0\Microsoft.AspNetCore.Http.dll
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Abstractions.dll
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Features.dll
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\bin\Debug\net7.0\Microsoft.AspNetCore.WebUtilities.dll
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\bin\Debug\net7.0\Microsoft.Extensions.Http.dll
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\bin\Debug\net7.0\Microsoft.Extensions.ObjectPool.dll
+D:\_DEV\_LAB\_PROJETO TIRO CURTO\_Producao GitHub\src\ConsoleDependencyInjection\bin\Debug\net7.0\Microsoft.Net.Http.Headers.dll
+D:\_DEV\_LAB\_CURSOS\CSharp\direto-ao-ponto\src\ConsoleDependencyInjection\obj\Debug\net7.0\ConsoleDependencyInjection.csproj.AssemblyReference.cache
+D:\_DEV\_LAB\_CURSOS\CSharp\direto-ao-ponto\src\ConsoleDependencyInjection\obj\Debug\net7.0\ConsoleDependencyInjection.GeneratedMSBuildEditorConfig.editorconfig
+D:\_DEV\_LAB\_CURSOS\CSharp\direto-ao-ponto\src\ConsoleDependencyInjection\obj\Debug\net7.0\ConsoleDependencyInjection.AssemblyInfoInputs.cache
+D:\_DEV\_LAB\_CURSOS\CSharp\direto-ao-ponto\src\ConsoleDependencyInjection\obj\Debug\net7.0\ConsoleDependencyInjection.AssemblyInfo.cs
+D:\_DEV\_LAB\_CURSOS\CSharp\direto-ao-ponto\src\ConsoleDependencyInjection\obj\Debug\net7.0\ConsoleDependencyInjection.csproj.CoreCompileInputs.cache
+D:\_DEV\_LAB\_CURSOS\CSharp\direto-ao-ponto\src\ConsoleDependencyInjection\obj\Debug\net7.0\ConsoleDependencyInjection.dll
+D:\_DEV\_LAB\_CURSOS\CSharp\direto-ao-ponto\src\ConsoleDependencyInjection\obj\Debug\net7.0\refint\ConsoleDependencyInjection.dll
+D:\_DEV\_LAB\_CURSOS\CSharp\direto-ao-ponto\src\ConsoleDependencyInjection\obj\Debug\net7.0\ConsoleDependencyInjection.pdb
