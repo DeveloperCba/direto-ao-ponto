@@ -1,11 +1,10 @@
-﻿namespace ConsoleEntityFrameworkCore.Enumerators
+﻿namespace ConsoleEntityFrameworkCore.Enumerators;
+
+public enum TypeDatabaseEnum
 {
-    public enum TypeDatabaseEnum
-    {
-        SQLServer,
-        Postgres,
-        MySQL,
-        Oracle,
-        SQLLite
-    }
+    SQLServer,
+    Postgres,
+    MySQL,
+    Oracle,
+    SQLLite
 }

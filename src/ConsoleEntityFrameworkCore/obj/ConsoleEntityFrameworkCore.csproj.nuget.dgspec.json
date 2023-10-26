@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\_DEV\\_LAB\\_CURSOS\\CSharp\\direto-ao-ponto\\src\\ConsoleEntityFrameworkCore\\ConsoleEntityFrameworkCore.csproj": {}
+    "E:\\_EDIELSON\\_LAB\\.NET\\direto-ao-ponto\\src\\ConsoleEntityFrameworkCore\\ConsoleEntityFrameworkCore.csproj": {}
   },
   "projects": {
-    "D:\\_DEV\\_LAB\\_CURSOS\\CSharp\\direto-ao-ponto\\src\\ConsoleEntityFrameworkCore\\ConsoleEntityFrameworkCore.csproj": {
+    "E:\\_EDIELSON\\_LAB\\.NET\\direto-ao-ponto\\src\\ConsoleEntityFrameworkCore\\ConsoleEntityFrameworkCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\_DEV\\_LAB\\_CURSOS\\CSharp\\direto-ao-ponto\\src\\ConsoleEntityFrameworkCore\\ConsoleEntityFrameworkCore.csproj",
+        "projectUniqueName": "E:\\_EDIELSON\\_LAB\\.NET\\direto-ao-ponto\\src\\ConsoleEntityFrameworkCore\\ConsoleEntityFrameworkCore.csproj",
         "projectName": "ConsoleEntityFrameworkCore",
-        "projectPath": "D:\\_DEV\\_LAB\\_CURSOS\\CSharp\\direto-ao-ponto\\src\\ConsoleEntityFrameworkCore\\ConsoleEntityFrameworkCore.csproj",
-        "packagesPath": "C:\\Users\\Servidor\\.nuget\\packages\\",
-        "outputPath": "D:\\_DEV\\_LAB\\_CURSOS\\CSharp\\direto-ao-ponto\\src\\ConsoleEntityFrameworkCore\\obj\\",
+        "projectPath": "E:\\_EDIELSON\\_LAB\\.NET\\direto-ao-ponto\\src\\ConsoleEntityFrameworkCore\\ConsoleEntityFrameworkCore.csproj",
+        "packagesPath": "C:\\Users\\49716\\.nuget\\packages\\",
+        "outputPath": "E:\\_EDIELSON\\_LAB\\.NET\\direto-ao-ponto\\src\\ConsoleEntityFrameworkCore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Servidor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\49716\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

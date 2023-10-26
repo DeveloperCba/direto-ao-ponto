@@ -1,9 +1,8 @@
 ﻿using ConsoleDependencyInjection.Models;
 
-namespace ConsoleDependencyInjection.Services
+namespace ConsoleDependencyInjection.Services;
+
+public interface  ICepService
 {
-    public interface  ICepService
-    {
-        Task<CepResponse> GetCepAsync(CepRequest request);
-    }
+    Task<CepResponse> GetCepAsync(CepRequest request);
 }

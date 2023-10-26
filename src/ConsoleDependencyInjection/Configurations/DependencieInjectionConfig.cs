@@ -2,17 +2,17 @@
 using ConsoleDependencyInjection.Services;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-namespace ConsoleDependencyInjection.Configurations
+namespace ConsoleDependencyInjection.Configurations;
+
+public static class DependencieInjectionConfig
 {
-    public static class DependencieInjectionConfig
+    public static ServiceProvider ConfigureService()
     {
-        public static ServiceProvider ConfigureService()
-        {
-            var configuration = AppSettingsExtensions.GetConfigurationAppSettings();
+        var configuration = AppSettingsExtensions.GetConfigurationAppSettings();
 
-            var appSettings = configuration.GetAppSettings<AppSettings>(nameof(AppSettings));
+        var appSettings = configuration.GetAppSettings<AppSettings>(nameof(AppSettings));
 
-            var serviceProvider = new ServiceCollection()
+        var serviceProvider = new ServiceCollection()
 
                 .AddLogging(options =>
                 {
@@ -20,14 +20,12 @@ namespace ConsoleDependencyInjection.Configurations
                     options.AddDebug();
                 })
                 .Configure<AppSettings>(configuration.GetSection(nameof(AppSettings)))
-                .AddHttpClient()
                 .AddHttpContextAccessor()
                 .AddScoped<ICepService,CepService>()
-                ;
+            ;
 
-            ServiceProvider provider = serviceProvider.BuildServiceProvider();
-            return provider;
-        }
+        ServiceProvider provider = serviceProvider.BuildServiceProvider();
+        return provider;
     }
 }
 

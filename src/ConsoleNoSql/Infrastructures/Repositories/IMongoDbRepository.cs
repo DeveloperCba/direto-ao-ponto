@@ -1,50 +1,48 @@
 ﻿using ConsoleNoSql.Models;
 using System.Linq.Expressions;
 
-namespace ConsoleNoSql.Infrastructures.Repositories
+namespace ConsoleNoSql.Infrastructures.Repositories;
+
+public interface IMongoDbRepository<TDocument> where TDocument : EntityMongoDb
 {
-    public interface IMongoDbRepository<TDocument> where TDocument : EntityMongoDb
-    {
-        IQueryable<TDocument> AsQueryable();
+    IQueryable<TDocument> AsQueryable();
 
-        IEnumerable<TDocument> FilterBy(
-            Expression<Func<TDocument, bool>> filterExpression);
+    IEnumerable<TDocument> FilterBy(
+        Expression<Func<TDocument, bool>> filterExpression);
 
-        IEnumerable<TProjected> FilterBy<TProjected>(
-            Expression<Func<TDocument, bool>> filterExpression,
-            Expression<Func<TDocument, TProjected>> projectionExpression);
+    IEnumerable<TProjected> FilterBy<TProjected>(
+        Expression<Func<TDocument, bool>> filterExpression,
+        Expression<Func<TDocument, TProjected>> projectionExpression);
 
-        TDocument FindOne(Expression<Func<TDocument, bool>> filterExpression);
+    TDocument FindOne(Expression<Func<TDocument, bool>> filterExpression);
 
-        Task<TDocument> FindOneAsync(Expression<Func<TDocument, bool>> filterExpression);
+    Task<TDocument> FindOneAsync(Expression<Func<TDocument, bool>> filterExpression);
 
-        TDocument FindById(string id);
+    TDocument FindById(string id);
 
-        Task<TDocument> FindByIdAsync(string id);
+    Task<TDocument> FindByIdAsync(string id);
 
-        void InsertOne(TDocument document);
+    void InsertOne(TDocument document);
 
-        Task InsertOneAsync(TDocument document);
+    Task InsertOneAsync(TDocument document);
 
-        void InsertMany(ICollection<TDocument> documents);
+    void InsertMany(ICollection<TDocument> documents);
 
-        Task InsertManyAsync(ICollection<TDocument> documents);
+    Task InsertManyAsync(ICollection<TDocument> documents);
 
-        void ReplaceOne(TDocument document);
+    void ReplaceOne(TDocument document);
 
-        Task ReplaceOneAsync(TDocument document);
+    Task ReplaceOneAsync(TDocument document);
 
-        void DeleteOne(Expression<Func<TDocument, bool>> filterExpression);
+    void DeleteOne(Expression<Func<TDocument, bool>> filterExpression);
 
-        Task DeleteOneAsync(Expression<Func<TDocument, bool>> filterExpression);
+    Task DeleteOneAsync(Expression<Func<TDocument, bool>> filterExpression);
 
-        void DeleteById(string id);
+    void DeleteById(string id);
 
-        Task DeleteByIdAsync(string id);
+    Task DeleteByIdAsync(string id);
 
-        bool DeleteMany(Expression<Func<TDocument, bool>> filterExpression);
+    bool DeleteMany(Expression<Func<TDocument, bool>> filterExpression);
 
-        Task<bool> DeleteManyAsync(Expression<Func<TDocument, bool>> filterExpression);
-    }
-
+    Task<bool> DeleteManyAsync(Expression<Func<TDocument, bool>> filterExpression);
 }

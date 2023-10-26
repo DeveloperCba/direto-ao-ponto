@@ -1,9 +1,8 @@
-﻿namespace ConsoleEntityFrameworkCore.Models
-{
-    public class Category : Entity
-    {
-        public string Description { get; set; }
+﻿namespace ConsoleEntityFrameworkCore.Models;
 
-        public IEnumerable<Product> Products { get; set; }
-    }
+public class Category : Entity
+{
+    public required string Description { get; set; }
+
+    public required IEnumerable<Product> Products { get; set; }
 }

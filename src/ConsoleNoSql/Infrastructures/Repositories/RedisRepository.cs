@@ -4,99 +4,98 @@ using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using System.Text;
 
-namespace ConsoleNoSql.Infrastructures.Repositories
+namespace ConsoleNoSql.Infrastructures.Repositories;
+
+public class RedisRepository : IRedisRepository
 {
-    public class RedisRepository : IRedisRepository
+    private readonly IDistributedCache _cache;
+    private readonly RedisSettings _cacheSettings;
+
+
+    public RedisRepository(
+        IDistributedCache cache,
+        IOptions<RedisSettings> cacheSettings)
     {
-        private readonly IDistributedCache _cache;
-        private readonly RedisSettings _cacheSettings;
+        _cache = cache;
+        _cacheSettings = cacheSettings.Value;
+    }
 
+    public async Task<TCache> GetCache<TCache>(string key)
+    {
+        var cacheResponse = await _cache.GetStringAsync(key);
+        if (!string.IsNullOrEmpty(cacheResponse))
+            return JsonConvert.DeserializeObject<TCache>(cacheResponse);
 
-        public RedisRepository(
-            IDistributedCache cache,
-            IOptions<RedisSettings> cacheSettings)
-        {
-            _cache = cache;
-            _cacheSettings = cacheSettings.Value;
-        }
+        return default;
+    }
 
-        public async Task<TCache> GetCache<TCache>(string key)
-        {
-            var cacheResponse = await _cache.GetStringAsync(key);
-            if (!string.IsNullOrEmpty(cacheResponse))
-                return JsonConvert.DeserializeObject<TCache>(cacheResponse);
+    public async Task<TCache> GetCacheByte<TCache>(string key)
+    {
+        var cacheResponse = await _cache.GetAsync(key);
+        if (cacheResponse != null && cacheResponse.Length > 0)
+            return JsonConvert.DeserializeObject<TCache>(Encoding.UTF8.GetString(cacheResponse));
 
-            return default;
-        }
+        return default;
+    }
 
-        public async Task<TCache> GetCacheByte<TCache>(string key)
-        {
-            var cacheResponse = await _cache.GetAsync(key);
-            if (cacheResponse != null && cacheResponse.Length > 0)
-                return JsonConvert.DeserializeObject<TCache>(Encoding.UTF8.GetString(cacheResponse));
+    public async Task<List<TCache>> GetCacheList<TCache>(string key)
+    {
+        var cacheResponse = await _cache.GetStringAsync(key);
+        if (string.IsNullOrEmpty(cacheResponse)) return null;
 
-            return default;
-        }
+        return JsonConvert.DeserializeObject<List<TCache>>(cacheResponse);
 
-        public async Task<List<TCache>> GetCacheList<TCache>(string key)
-        {
-            var cacheResponse = await _cache.GetStringAsync(key);
-            if (string.IsNullOrEmpty(cacheResponse)) return null;
+    }
 
-            return JsonConvert.DeserializeObject<List<TCache>>(cacheResponse);
+    public async Task SetCache<TCache>(string key, TCache value, double timeExpiration = -1)
+    {
+        var response = JsonConvert.SerializeObject(value);
 
-        }
+        if (timeExpiration == -1)
+            await _cache.SetStringAsync(key, response, GetOptionsCache());
+        else
+            await _cache.SetStringAsync(key, response, GetOptionsCache(timeExpiration));
+    }
 
-        public async Task SetCache<TCache>(string key, TCache value, double timeExpiration = -1)
-        {
-            var response = JsonConvert.SerializeObject(value);
+    public async Task SetCacheByte<TCache>(string key, TCache value, double timeExpiration = -1)
+    {
+        var response = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(value));
 
-            if (timeExpiration == -1)
-                await _cache.SetStringAsync(key, response, GetOptionsCache());
-            else
-                await _cache.SetStringAsync(key, response, GetOptionsCache(timeExpiration));
-        }
+        if (timeExpiration == -1)
+            await _cache.SetAsync(key, response, GetOptionsCache());
+        else
+            await _cache.SetAsync(key, response, GetOptionsCache(timeExpiration));
+    }
 
-        public async Task SetCacheByte<TCache>(string key, TCache value, double timeExpiration = -1)
-        {
-            var response = Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(value));
+    public async Task SetCache<TCache>(string key, TCache value, DistributedCacheEntryOptions options)
+    {
+        var response = JsonConvert.SerializeObject(value);
+        await _cache.SetStringAsync(key, response, options);
+    }
 
-            if (timeExpiration == -1)
-                await _cache.SetAsync(key, response, GetOptionsCache());
-            else
-                await _cache.SetAsync(key, response, GetOptionsCache(timeExpiration));
-        }
+    public async Task UpdateCache(string key)
+    {
+        await _cache.RefreshAsync(key);
+    }
 
-        public async Task SetCache<TCache>(string key, TCache value, DistributedCacheEntryOptions options)
-        {
-            var response = JsonConvert.SerializeObject(value);
-            await _cache.SetStringAsync(key, response, options);
-        }
+    public async Task RemoveCache(string key)
+    {
+        await _cache.RemoveAsync(key);
+    }
 
-        public async Task UpdateCache(string key)
-        {
-            await _cache.RefreshAsync(key);
-        }
-
-        public async Task RemoveCache(string key)
-        {
-            await _cache.RemoveAsync(key);
-        }
-
-        private DistributedCacheEntryOptions GetOptionsCache()
-        {
-            return new DistributedCacheEntryOptions()
-                    .SetAbsoluteExpiration(DateTime.Now.AddMinutes(_cacheSettings.AbsoluteExpirationInMinutes))
+    private DistributedCacheEntryOptions GetOptionsCache()
+    {
+        return new DistributedCacheEntryOptions()
+            .SetAbsoluteExpiration(DateTime.Now.AddMinutes(_cacheSettings.AbsoluteExpirationInMinutes))
             .SetSlidingExpiration(TimeSpan.FromMinutes(_cacheSettings.SlidingExpirationInMinutes));
 
-        }
+    }
 
-        private DistributedCacheEntryOptions GetOptionsCache(double minuutes)
-        {
-            return new DistributedCacheEntryOptions()
-                    .SetAbsoluteExpiration(DateTime.Now.AddMinutes(minuutes))
+    private DistributedCacheEntryOptions GetOptionsCache(double minuutes)
+    {
+        return new DistributedCacheEntryOptions()
+            .SetAbsoluteExpiration(DateTime.Now.AddMinutes(minuutes))
             .SetSlidingExpiration(TimeSpan.FromMinutes(_cacheSettings.SlidingExpirationInMinutes));
 
-        }
     }
 }

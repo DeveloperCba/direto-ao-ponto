@@ -1,7 +1,6 @@
-﻿namespace ConsoleDependencyInjection.Models
+﻿namespace ConsoleDependencyInjection.Models;
+
+public class CepRequest
 {
-    public class CepRequest
-    {
-        public string Cep { get; set; }
-    }
+    public string Cep { get; set; }
 }

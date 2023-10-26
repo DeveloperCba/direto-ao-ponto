@@ -3,18 +3,18 @@ using ConsoleNoSql.Infrastructures.Repositories;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-namespace ConsoleNoSql.Configurations
+namespace ConsoleNoSql.Configurations;
+
+public static class DependencieInjectionConfig
 {
-    public static class DependencieInjectionConfig
+    public static ServiceProvider ConfigureService()
     {
-        public static ServiceProvider ConfigureService()
-        {
-            var configuration = AppSettingsExtensions.GetConfigurationAppSettings();
+        var configuration = AppSettingsExtensions.GetConfigurationAppSettings();
 
-            var redisSettings = configuration.GetAppSettings<RedisSettings>(nameof(RedisSettings));
-            var mongoDbSettings = configuration.GetAppSettings<MongoDbSettings>(nameof(MongoDbSettings));
+        var redisSettings = configuration.GetAppSettings<RedisSettings>(nameof(RedisSettings));
+        var mongoDbSettings = configuration.GetAppSettings<MongoDbSettings>(nameof(MongoDbSettings));
 
-            var serviceProvider = new ServiceCollection()
+        var serviceProvider = new ServiceCollection()
 
                 .AddLogging(options =>
                 {
@@ -29,10 +29,9 @@ namespace ConsoleNoSql.Configurations
                 .AddScoped(typeof(IMongoDbRepository<>), typeof(MongoDbRepository<>))
                 .AddRedisConfiguration(configuration)
 
-                ;
+            ;
 
-            ServiceProvider provider = serviceProvider.BuildServiceProvider();
-            return provider;
-        }
+        ServiceProvider provider = serviceProvider.BuildServiceProvider();
+        return provider;
     }
 }

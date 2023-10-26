@@ -1,8 +1,7 @@
-﻿namespace ConsoleNoSql.Helpers
+﻿namespace ConsoleNoSql.Helpers;
+
+public class MongoDbSettings
 {
-    public class MongoDbSettings
-    {
-        public string ConnectionStrings { get; set; }
-        public string DatabaseName { get; set; }
-    }
+    public string ConnectionStrings { get; set; }
+    public string DatabaseName { get; set; }
 }

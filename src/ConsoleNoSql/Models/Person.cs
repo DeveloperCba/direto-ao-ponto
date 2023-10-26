@@ -1,11 +1,10 @@
 ﻿using ConsoleNoSql.Helpers;
 
-namespace ConsoleNoSql.Models
+namespace ConsoleNoSql.Models;
+
+public class Person : EntityMongoDb
 {
-    public class Person : EntityMongoDb
-    {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public DateTime BirthDate { get; set; }
-    }
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public DateTime BirthDate { get; set; }
 }
